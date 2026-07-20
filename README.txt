@@ -1,14 +1,24 @@
-AOIP.app Landing Page - Publish Ready v10
+AOIP.app Landing Page
 
-This package contains the static public landing page for AOIP.app.
+This repository contains the static public landing page for AOIP.app.
 
-Upload the contents of this folder to the public web root for aoip.app.
-Suggested public structure:
-- aoip.app          = public product landing page
-- demo.aoip.app    = demo AOIP environment, noindex/private as needed
-- omr.aoip.app     = Oradea pilot environment, login-only/noindex
+AOIP — Airport Operational Intelligence Platform — connects daily airport operations, ground handling records, supervisor visibility, trip files, master data and ready-made daily, weekly and monthly management reporting.
+
+Deployment structure:
+
+- aoip.app
+  Public AOIP landing page.
+
+- test.aoip.app
+  AOIP demo / test environment with sample data.
+  Private/noindex as needed.
+
+- omr.aoip.app
+  AOIP - OMR pilot environment.
+  Login-only/noindex.
 
 Files included:
+
 - index.html
 - robots.txt
 - sitemap.xml
@@ -23,12 +33,15 @@ Files included:
 - assets/aoip-cloud-view.svg
 
 Notes:
-- The public contact form currently opens the visitor's email client with a prepared inquiry to info@aoip.app.
-- When the VPS/backend is ready, connect the form to a server-side mail endpoint.
-- Keep demo and airport pilot systems separate from the public landing page.
 
+- This repository contains only the public marketing website.
+- It does not contain AOIP application source code.
+- It does not contain server passwords, environment variables, databases, operational data or private airport data.
+- The AOIP application itself is deployed separately from the private AOIP repository.
+- The contact form currently opens the visitor's email client with a prepared inquiry to info@aoip.app.
 
-V9 update: green labels increased slightly while staying one-line on desktop; contact heading adjusted to two lines; contact form fit refined; hero CTA changed to Contact.
+VPS deployment target:
 
-
-V10 update: Reporting Intelligence preview improved with a real-style Monthly Passenger Overview chart showing capacity, passengers and SLF; Monthly Passenger Overview and Management Commentary cards restyled to match the premium card system.
+- Public web root: /var/www/aoip-landing
+- Served by Nginx
+- HTTPS via server SSL configuration
