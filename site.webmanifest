@@ -1,0 +1,16 @@
+{
+  "name": "AOIP.app",
+  "short_name": "AOIP",
+  "description": "Airport Operational Intelligence Platform for regional airports.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07162f",
+  "theme_color": "#07162f",
+  "icons": [
+    {
+      "src": "assets/aoip-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
